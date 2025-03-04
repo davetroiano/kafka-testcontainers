@@ -73,7 +73,6 @@ Exception in thread "main" java.lang.IllegalArgumentException: requirement faile
    at kafka.docker.KafkaDockerWrapper$.main(KafkaDockerWrapper.scala:48 undefined)
    at kafka.docker.KafkaDockerWrapper.main(KafkaDockerWrapper.scala undefined)
    at java.base@21.0.2/java.lang.invoke.LambdaForm$DMH/sa346b79c.invokeStaticInit(LambdaForm$DMH undefined)
-Wrap text
 ```
 * The `4.0.0-rc0` tests fail due to what appears to be the same root cause:
 ```noformat
@@ -89,7 +88,5 @@ Exception in thread "main" java.lang.IllegalArgumentException: requirement faile
    at kafka.tools.StorageTool$.main(StorageTool.scala:46 undefined)
    at kafka.docker.KafkaDockerWrapper$.main(KafkaDockerWrapper.scala:57 undefined)
    at kafka.docker.KafkaDockerWrapper.main(KafkaDockerWrapper.scala undefined)
-
-Formatted by https://st.elmah.io
 ```
 * Attempted to work around by explcitly adding a listener via [`withListener()`](https://www.javadoc.io/static/org.testcontainers/kafka/1.20.4/index.html?org/testcontainers/containers/KafkaContainer.html) but the error persists, maybe because it only registers _additional_ listeners rather than overwriting.
