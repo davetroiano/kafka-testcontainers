@@ -8,7 +8,7 @@ This contains a smoke test of Kafka TestContainers compatibility on Kafka 3.8-4.
 
 ## Repro
 
-This runs a parametrized test that simple tests whether `KafkaContainer` can be started and stopped using the following Docker images:
+This runs a parametrized test that simply tests whether `KafkaContainer` can be started and stopped using the following Docker images:
 
 - `apache/kafka:3.8.0`
 - `apache/kafka-native:3.8.0`
