@@ -29,7 +29,7 @@ Observations:
 
 * The two `3.8.0` tests pass
 * The other four tests (`apache/kafka:3.9.0`, `apache/kafka-native:3.9.0`, `apache/kafka:4.0.0-rc0`, `apache/kafka-native:4.0.0-rc0`) fail
-* The `3.9.0` tests fail due to:
+* The `apache/kafka-native:3.9.0` tests fail due to:
 ```noformat
     ===> Configuring ...
     Running in KRaft mode...
@@ -74,7 +74,7 @@ Exception in thread "main" java.lang.IllegalArgumentException: requirement faile
    at kafka.docker.KafkaDockerWrapper.main(KafkaDockerWrapper.scala undefined)
    at java.base@21.0.2/java.lang.invoke.LambdaForm$DMH/sa346b79c.invokeStaticInit(LambdaForm$DMH undefined)
 ```
-* The `4.0.0-rc0` tests fail due to what appears to be the same root cause:
+* The `apache/kafka:3.9.0` and both `4.0.0-rc0` tests fail due to what appears to be the same root cause:
 ```noformat
 Exception in thread "main" java.lang.IllegalArgumentException: requirement failed:
         advertised.listeners cannot use the nonroutable meta-address 0.0.0.0. Use a routable IP address.
